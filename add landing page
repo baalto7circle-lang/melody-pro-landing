@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Melody Pro — аудиоплеер</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: #0f1115;
+      color: #e2e8f0;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 720px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 12px;
+      color: #fff;
+    }
+    p {
+      line-height: 1.6;
+      color: #94a3b8;
+      margin-bottom: 24px;
+    }
+    .features {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 32px;
+    }
+    .features li {
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .bullet::before {
+      content: "•";
+      color: #3b82f6;
+      font-weight: bold;
+    }
+    .price-box {
+      background: #1e293b;
+      padding: 24px;
+      border-radius: 12px;
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .price {
+      font-size: 36px;
+      font-weight: 700;
+      color: #f8fafc;
+      margin: 8px 0 16px 0;
+    }
+    .buy-btn {
+      display: inline-block;
+      padding: 14px 28px;
+      background: #3b82f6;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    .buy-btn:hover {
+      background: #2563eb;
+    }
+    .contact {
+      margin-top: 40px;
+      font-size: 13px;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Melody Pro</h1>
+    <p>
+      Bit-perfect аудиоплеер для Windows с поддержкой WASAPI Exclusive, ASIO и Hi-Res форматов.
+      Оптимизирован для аудиосистем высокого класса.
+    </p>
+    <ul class="features">
+      <li><span class="bullet"></span>Точная передача аудио без передискретизации.</li>
+      <li><span class="bullet"></span>Поддержка 24/192, DSD, FLAC, WAV, ALAC.</li>
+      <li><span class="bullet"></span>Режим WASAPI Exclusive для максимальной чистоты звука.</li>
+      <li><span class="bullet"></span>Лицензия действует бессрочно на 2 устройства.</li>
+    </ul>
+    <div class="price-box">
+      <p style="margin:0; color:#94a3b8;">Бессрочная лицензия</p>
+      <div class="price">990 ₽</div>
+      <a href="#" class="buy-btn">Купить лицензию</a>
+      <p style="margin-top:12px; font-size:13px; color:#64748b;">
+        Кнопка «Купить» предназначена для интеграции с платёжной системой.
+      </p>
+    </div>
+    <div class="contact">
+      <p>По вопросам и поддержке: melody.support@example.com</p>
+      <p>Разработчик: Melody Audio</p>
+    </div>
+  </div>
+</body>
+</html>
