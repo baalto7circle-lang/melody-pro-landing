@@ -1,106 +1,146 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>Melody Pro — аудиоплеер</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Melody Pro — Bit-perfect аудиоплеер для Windows</title>
   <style>
     body {
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-      background: #0f1115;
-      color: #e2e8f0;
       margin: 0;
       padding: 0;
+      background-color: #050505;
+      color: #e0e0e0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     }
-    .container {
-      max-width: 720px;
-      margin: 40px auto;
-      padding: 20px;
+    header {
+      padding: 40px 20px;
     }
     h1 {
-      font-size: 28px;
-      margin-bottom: 12px;
-      color: #fff;
+      margin: 0 0 12px 0;
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
     }
-    p {
-      line-height: 1.6;
-      color: #94a3b8;
-      margin-bottom: 24px;
+    .subtitle {
+      color: #a0a0a0;
+      font-size: 15px;
+      line-height: 1.5;
+      max-width: 600px;
     }
     .features {
+      padding: 0 20px 40px 20px;
+    }
+    .features h3 {
+      margin: 0 0 20px 0;
+      font-size: 20px;
+      font-weight: 600;
+    }
+    .features ul {
       list-style: none;
       padding: 0;
-      margin-bottom: 32px;
+      margin: 0;
     }
     .features li {
-      margin-bottom: 8px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
+      margin-bottom: 14px;
+      font-size: 15px;
+      line-height: 1.5;
     }
-    .bullet::before {
-      content: "•";
-      color: #3b82f6;
-      font-weight: bold;
+    .features strong {
+      color: #ffffff;
     }
-    .price-box {
-      background: #1e293b;
-      padding: 24px;
+    .price-block {
+      background-color: #1a1a1a;
       border-radius: 12px;
+      padding: 32px;
       text-align: center;
-      margin-bottom: 32px;
+      max-width: 480px;
+      margin: 0 auto 40px auto;
+    }
+    .license-label {
+      color: #a0a0a0;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
     }
     .price {
-      font-size: 36px;
+      font-size: 48px;
       font-weight: 700;
-      color: #f8fafc;
-      margin: 8px 0 16px 0;
+      color: #ffffff;
+      margin: 0 0 24px 0;
     }
-    .buy-btn {
-      display: inline-block;
-      padding: 14px 28px;
-      background: #3b82f6;
-      color: white;
-      text-decoration: none;
+    .btn {
+      background-color: #3b82f6;
+      color: #ffffff;
+      border: none;
+      padding: 14px 32px;
       border-radius: 8px;
+      font-size: 16px;
       font-weight: 600;
-      transition: background 0.2s;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
     }
-    .buy-btn:hover {
-      background: #2563eb;
+    .btn:hover {
+      background-color: #2563eb;
     }
-    .contact {
-      margin-top: 40px;
+    .note {
+      padding: 0 20px;
+      color: #707070;
       font-size: 13px;
-      color: #64748b;
+      line-height: 1.5;
+      text-align: center;
+    }
+    .footer {
+      padding: 40px 20px;
+      color: #606060;
+      font-size: 13px;
+      text-align: center;
+    }
+    .footer p {
+      margin: 6px 0;
     }
   </style>
 </head>
 <body>
-  <div class="container">
+  <header>
     <h1>Melody Pro</h1>
-    <p>
-      Bit-perfect аудиоплеер для Windows с поддержкой WASAPI Exclusive, ASIO и Hi-Res форматов.
-      Оптимизирован для аудиосистем высокого класса.
+    <p class="subtitle">
+      Bit-perfect аудиоплеер для Windows с поддержкой WASAPI Exclusive и Hi-Res форматов.
+      Оптимизирован для аудиосистем, где важна чистота сигнала.
     </p>
-    <ul class="features">
-      <li><span class="bullet"></span>Точная передача аудио без передискретизации.</li>
-      <li><span class="bullet"></span>Поддержка 24/192, DSD, FLAC, WAV, ALAC.</li>
-      <li><span class="bullet"></span>Режим WASAPI Exclusive для максимальной чистоты звука.</li>
-      <li><span class="bullet"></span>Лицензия действует бессрочно на 2 устройства.</li>
+  </header>
+
+  <section class="features">
+    <h3>Почему Melody Pro даёт максимально чистый звук</h3>
+    <ul>
+      <li>
+        <strong>WASAPI Exclusive для Hi‑Res:</strong> DSD, FLAC и WAV воспроизводятся через нативный mpv, минуя микшер Windows — это даёт максимально чистый сигнал без искажений.
+      </li>
+      <li>
+        <strong>Гибридная архитектура:</strong> обычные форматы идут через Web Audio API/WASAPI с минимальным вмешательством системы, а тяжёлые Hi‑Res‑потоки обрабатываются отдельным изолированным процессом — так плеер не «проседает» на сложных файлах.
+      </li>
+      <li>
+        <strong>Изоляция от шумов ОС:</strong> отключены WebRTC‑эффекты (AEC/AGC/NS), которые могут добавлять артефакты; процессы плеера изолированы от фоновых задач — стабильность воспроизведения не зависит от нагрузки на ПК.
+      </li>
+      <li>
+        <strong>Bit‑perfect без передискретизации:</strong> аудио передаётся «как есть», без лишних преобразований — именно так задумывал звукорежиссёр.
+      </li>
     </ul>
-    <div class="price-box">
-      <p style="margin:0; color:#94a3b8;">Бессрочная лицензия</p>
-      <div class="price">990 ₽</div>
-      <a href="#" class="buy-btn">Купить лицензию</a>
-      <p style="margin-top:12px; font-size:13px; color:#64748b;">
-        Кнопка «Купить» предназначена для интеграции с платёжной системой.
-      </p>
-    </div>
-    <div class="contact">
-      <p>По вопросам и поддержке: melody.support@example.com</p>
-      <p>Разработчик: Melody Audio</p>
+  </section>
+
+  <div class="price-block">
+    <div class="license-label">Бессрочная лицензия</div>
+    <div class="price">990 ₽</div>
+    <a href="#" class="btn">Купить лицензию</a>
+    <div class="note">
+      Кнопка «Купить» предназначена для интеграции с платёжной системой.
     </div>
   </div>
+
+  <section class="footer">
+    <p>По вопросам и поддержке: melody.support@example.com</p>
+    <p>Разработчик: Melody Audio</p>
+  </section>
 </body>
 </html>
